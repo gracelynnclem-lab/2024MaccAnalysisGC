@@ -1,0 +1,49 @@
+name: Rank Order Analysis
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-rank-order:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run rank ordering analysis
+        run: python src/rank_order.py
+
+      - name: Upload outputs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: outputs
+          path: outputs/*
+          if-no-files-found: error
+
+      - name: Commit updated outputs on main
+        if: github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- outputs/; then
+            git add outputs/
+            git commit -m "Update outputs"
+            git push
+          else
+            echo "No output changes to commit."
+          fi
