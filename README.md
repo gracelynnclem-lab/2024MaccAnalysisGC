@@ -8,7 +8,8 @@ This repository contains a deterministic analysis workflow that ranks MAcc progr
 - Computes ranking metrics (`mean_rating`, `n_valid`) and tie-breaks deterministically.
 - Writes outputs to `outputs/`:
   - `rank_order.csv`
-  - `rank_order.png`
+  - `rank_order.png` (artifact)
+  - `rank_order.svg` (committed visual)
   - `reflection.md` (stub template, only created if missing)
 - GitHub Actions runs the script on pull requests and on pushes to `main`, and uploads `outputs/*` as an artifact.
 

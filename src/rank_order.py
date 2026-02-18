@@ -237,7 +237,7 @@ def infer_year(path: Path) -> str | None:
     return match.group(1) if match else None
 
 
-def save_plot(ranked: pd.DataFrame, out_png: Path, topn: int, year: str | None) -> None:
+def save_plot(ranked: pd.DataFrame, out_png: Path, out_svg: Path, topn: int, year: str | None) -> None:
     top = ranked.head(topn).copy()
     top = top.sort_values(by=["mean_rating", "n_valid", "item_label"], ascending=[True, True, False])
 
@@ -249,6 +249,7 @@ def save_plot(ranked: pd.DataFrame, out_png: Path, topn: int, year: str | None) 
     plt.title(title)
     plt.tight_layout()
     plt.savefig(out_png, dpi=150)
+    plt.savefig(out_svg, format="svg")
     plt.close()
 
 
@@ -278,14 +279,16 @@ def main() -> int:
     ranked = compute_rankings(df, label_map)
     out_csv = outdir / "rank_order.csv"
     out_png = outdir / "rank_order.png"
+    out_svg = outdir / "rank_order.svg"
     out_reflection = outdir / "reflection.md"
 
     ranked.to_csv(out_csv, index=False, float_format="%.6f")
-    save_plot(ranked, out_png, args.topn, infer_year(input_path))
+    save_plot(ranked, out_png, out_svg, args.topn, infer_year(input_path))
     ensure_reflection_stub(out_reflection)
 
     print(f"[INFO] Wrote ranking CSV: {out_csv}")
     print(f"[INFO] Wrote ranking figure: {out_png}")
+    print(f"[INFO] Wrote ranking vector figure: {out_svg}")
     print(f"[INFO] Reflection stub present: {out_reflection}")
     return 0
 

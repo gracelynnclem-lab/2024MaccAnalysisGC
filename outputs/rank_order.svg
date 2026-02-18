@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="530" viewBox="0 0 1200 530">
+<rect width="100%" height="100%" fill="white"/>
+<text x="40" y="40" font-family="Arial, sans-serif" font-size="26" font-weight="bold">Exit Survey Rank Ordering (Top 10)</text>
+<text x="40" y="62" font-family="Arial, sans-serif" font-size="14" fill="#444">Generated from outputs/rank_order.csv</text>
+<text x="20" y="89" font-family="Arial, sans-serif" font-size="12">1. During the academic semesters of your MAcc program, how man...</text>
+<rect x="420" y="70" width="700" height="28" fill="#2B6CB0"/>
+<text x="1128" y="89" font-family="Arial, sans-serif" font-size="12">18.232</text>
+<text x="20" y="131" font-family="Arial, sans-serif" font-size="12">2. How many hours do you think a MAcc student SHOULD BE EXPECT...</text>
+<rect x="420" y="112" width="470" height="28" fill="#2B6CB0"/>
+<text x="898" y="131" font-family="Arial, sans-serif" font-size="12">12.250</text>
+<text x="20" y="173" font-family="Arial, sans-serif" font-size="12">3. During the academic semesters of your MAcc program, how man...</text>
+<rect x="420" y="154" width="461" height="28" fill="#2B6CB0"/>
+<text x="889" y="173" font-family="Arial, sans-serif" font-size="12">12.018</text>
+<text x="20" y="215" font-family="Arial, sans-serif" font-size="12">4. During the academic semesters of your MAcc program, how man...</text>
+<rect x="420" y="196" width="226" height="28" fill="#2B6CB0"/>
+<text x="654" y="215" font-family="Arial, sans-serif" font-size="12">5.893</text>
+<text x="20" y="257" font-family="Arial, sans-serif" font-size="12">5. Please place each MAcc CORE course into rank order based on...</text>
+<rect x="420" y="238" width="224" height="28" fill="#2B6CB0"/>
+<text x="652" y="257" font-family="Arial, sans-serif" font-size="12">5.855</text>
+<text x="20" y="299" font-family="Arial, sans-serif" font-size="12">6. Please place each MAcc CORE course into rank order based on...</text>
+<rect x="420" y="280" width="196" height="28" fill="#2B6CB0"/>
+<text x="624" y="299" font-family="Arial, sans-serif" font-size="12">5.127</text>
+<text x="20" y="341" font-family="Arial, sans-serif" font-size="12">7. Please place each MAcc CORE course into rank order based on...</text>
+<rect x="420" y="322" width="195" height="28" fill="#2B6CB0"/>
+<text x="623" y="341" font-family="Arial, sans-serif" font-size="12">5.091</text>
+<text x="20" y="383" font-family="Arial, sans-serif" font-size="12">8. Rate ACC 6020 Advanced Financial Application on a scale fro...</text>
+<rect x="420" y="364" width="191" height="28" fill="#2B6CB0"/>
+<text x="619" y="383" font-family="Arial, sans-serif" font-size="12">5.000</text>
+<text x="20" y="425" font-family="Arial, sans-serif" font-size="12">9. Please place each MAcc CORE course into rank order based on...</text>
+<rect x="420" y="406" width="184" height="28" fill="#2B6CB0"/>
+<text x="612" y="425" font-family="Arial, sans-serif" font-size="12">4.818</text>
+<text x="20" y="467" font-family="Arial, sans-serif" font-size="12">10. Please place each MAcc CORE course into rank order based on...</text>
+<rect x="420" y="448" width="180" height="28" fill="#2B6CB0"/>
+<text x="608" y="467" font-family="Arial, sans-serif" font-size="12">4.691</text>
+</svg>
